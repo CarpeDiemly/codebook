@@ -62,6 +62,8 @@ class VaultRepository(
 
     fun hasVault(): Boolean = storage.exists()
 
+    /** 所有读写都在同一把锁里，避免并发保存互相覆盖。 */
+    @Synchronized
     fun state(): VaultState = when {
         payload != null -> VaultState.Unlocked(payload!!.entries)
         storage.exists() -> VaultState.Locked
@@ -72,6 +74,7 @@ class VaultRepository(
     fun isUnlocked(): Boolean = payload != null
 
     /** 首次创建保险库。 */
+    @Synchronized
     fun create(password: CharArray, now: Instant = Instant.now()): Result<Unit> = runCatching {
         require(!storage.exists()) { "保险库已存在" }
         require(PasswordPolicy.isAcceptableForVault(password)) {
@@ -108,6 +111,7 @@ class VaultRepository(
     }
 
     /** 用主密码解锁。 */
+    @Synchronized
     fun unlock(password: CharArray): UnlockResult {
         if (!storage.exists()) return UnlockResult.NotInitialized
 
@@ -165,6 +169,7 @@ class VaultRepository(
     }
 
     /** 保存全部条目（整体重加密）。返回清洗后的条目列表。 */
+    @Synchronized
     fun saveEntries(entries: List<Entry>): Result<List<Entry>> = runCatching {
         val currentDek = dek ?: error("保险库已锁定")
         val currentEnvelope = envelope ?: error("保险库状态异常")
@@ -182,6 +187,7 @@ class VaultRepository(
     }
 
     /** 修改主密码。要求当前已解锁。 */
+    @Synchronized
     fun changePassword(oldPassword: CharArray, newPassword: CharArray): ChangePasswordResult {
         if (payload == null) return ChangePasswordResult.NotUnlocked
         if (!PasswordPolicy.isAcceptableForVault(newPassword)) {
@@ -237,6 +243,7 @@ class VaultRepository(
     }
 
     /** 锁定：清零 DEK，丢弃明文条目。 */
+    @Synchronized
     fun lock() {
         Crypto.wipe(dek)
         dek = null

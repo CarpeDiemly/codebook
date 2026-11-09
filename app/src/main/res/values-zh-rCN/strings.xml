@@ -23,6 +23,7 @@
     <!-- 解锁 -->
     <string name="unlock_title">保险库已锁定</string>
     <string name="unlock_subtitle">输入主密码解锁。</string>
+    <string name="unlock_slow_hint">解锁大约需要 1 秒：密钥按设计要用 PBKDF2 迭代 60 万次。</string>
     <string name="unlock_button">解锁</string>
     <string name="unlock_error_wrong">主密码不正确。</string>
     <string name="unlock_error_corrupt">保险库文件已损坏或被篡改。</string>
@@ -32,13 +33,43 @@
     <!-- 列表 -->
     <string name="vault_title">保险库</string>
     <string name="vault_empty_title">还没有条目</string>
-    <string name="vault_empty_body">添加第一个账号，开始使用。</string>
+    <string name="vault_empty_body">点右下角的 + 添加第一个账号。</string>
     <string name="vault_lock">锁定</string>
     <string name="vault_add">添加条目</string>
     <string name="vault_search_hint">搜索名称、账号或备注</string>
-    <string name="vault_count">%1$d 条</string>
-    <string name="vault_count_one">1 条</string>
+    <plurals name="vault_count">
+        <item quantity="other">%d 条</item>
+    </plurals>
     <string name="vault_no_match">没有匹配的条目</string>
+
+    <!-- 条目 -->
+    <string name="label_name">名称</string>
+    <string name="label_username">账号</string>
+    <string name="label_password">密码</string>
+    <string name="label_type">密码类型</string>
+    <string name="label_notes">备注</string>
+    <string name="entry_created_value">创建时间：%1$s</string>
+    <string name="entry_updated_value">更新时间：%1$s</string>
+    <string name="entry_new">新建条目</string>
+    <string name="entry_edit">编辑条目</string>
+    <string name="entry_save">保存</string>
+    <string name="entry_error_name">名称不能为空。</string>
+    <string name="entry_password_empty">未设置密码</string>
+    <string name="entry_notes_hint">可选</string>
+    <string name="entry_delete_title">删除这个条目？</string>
+    <string name="entry_delete_message">删除后无法恢复。</string>
+    <string name="entry_unsaved_title">放弃修改？</string>
+    <string name="entry_unsaved_message">刚才的编辑将丢失。</string>
+
+    <!-- 操作 -->
+    <string name="action_copy_username">复制账号</string>
+    <string name="action_copy_password">复制密码</string>
+    <string name="action_copied">已复制，剪贴板 30 秒后自动清空。</string>
+    <string name="action_edit">编辑</string>
+    <string name="action_delete">删除</string>
+    <string name="action_generate">生成</string>
+    <string name="action_discard">放弃</string>
+    <string name="action_keep_editing">继续编辑</string>
 
     <!-- 密码类型 -->
     <string name="type_login">登录密码</string>
@@ -49,13 +80,19 @@
     <string name="type_security">密保答案</string>
     <string name="type_applock">应用锁</string>
     <string name="type_custom">自定义</string>
+    <string name="type_pick_title">选择密码类型</string>
+    <string name="type_custom_label">自定义类型名称</string>
+
+    <!-- 生成器 -->
+    <string name="generator_title">生成密码</string>
+    <string name="generator_length">长度：%1$d</string>
+    <string name="generator_symbols">包含符号</string>
+    <string name="generator_hint">将替换当前密码。</string>
 
     <!-- 通用 -->
     <string name="common_cancel">取消</string>
     <string name="common_save">保存</string>
-    <string name="common_delete">删除</string>
     <string name="common_back">返回</string>
     <string name="common_show">显示</string>
     <string name="common_hide">隐藏</string>
-    <string name="common_required">必填</string>
 </resources>

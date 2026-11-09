@@ -23,6 +23,7 @@
     <!-- 解锁 -->
     <string name="unlock_title">Vault locked</string>
     <string name="unlock_subtitle">Enter your master password to unlock.</string>
+    <string name="unlock_slow_hint">Unlocking takes about a second: the key is derived with 600,000 PBKDF2 iterations by design.</string>
     <string name="unlock_button">Unlock</string>
     <string name="unlock_error_wrong">Wrong master password.</string>
     <string name="unlock_error_corrupt">The vault file is damaged or has been tampered with.</string>
@@ -32,13 +33,44 @@
     <!-- 列表 -->
     <string name="vault_title">Vault</string>
     <string name="vault_empty_title">No entries yet</string>
-    <string name="vault_empty_body">Add your first account to get started.</string>
+    <string name="vault_empty_body">Tap + to add your first account.</string>
     <string name="vault_lock">Lock</string>
     <string name="vault_add">Add entry</string>
     <string name="vault_search_hint">Search name, account or note</string>
-    <string name="vault_count">%1$d entries</string>
-    <string name="vault_count_one">1 entry</string>
+    <plurals name="vault_count">
+        <item quantity="one">%d entry</item>
+        <item quantity="other">%d entries</item>
+    </plurals>
     <string name="vault_no_match">No matching entries</string>
+
+    <!-- 条目 -->
+    <string name="label_name">Name</string>
+    <string name="label_username">Account</string>
+    <string name="label_password">Password</string>
+    <string name="label_type">Password type</string>
+    <string name="label_notes">Notes</string>
+    <string name="entry_created_value">Created: %1$s</string>
+    <string name="entry_updated_value">Updated: %1$s</string>
+    <string name="entry_new">New entry</string>
+    <string name="entry_edit">Edit entry</string>
+    <string name="entry_save">Save</string>
+    <string name="entry_error_name">Name is required.</string>
+    <string name="entry_password_empty">No password set</string>
+    <string name="entry_notes_hint">Optional</string>
+    <string name="entry_delete_title">Delete this entry?</string>
+    <string name="entry_delete_message">This cannot be undone.</string>
+    <string name="entry_unsaved_title">Discard changes?</string>
+    <string name="entry_unsaved_message">Your edits will be lost.</string>
+
+    <!-- 操作 -->
+    <string name="action_copy_username">Copy account</string>
+    <string name="action_copy_password">Copy password</string>
+    <string name="action_copied">Copied. Clipboard clears in 30 seconds.</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_generate">Generate</string>
+    <string name="action_discard">Discard</string>
+    <string name="action_keep_editing">Keep editing</string>
 
     <!-- 密码类型 -->
     <string name="type_login">Login password</string>
@@ -49,13 +81,19 @@
     <string name="type_security">Security answer</string>
     <string name="type_applock">App lock</string>
     <string name="type_custom">Custom</string>
+    <string name="type_pick_title">Choose password type</string>
+    <string name="type_custom_label">Custom type name</string>
+
+    <!-- 生成器 -->
+    <string name="generator_title">Generate password</string>
+    <string name="generator_length">Length: %1$d</string>
+    <string name="generator_symbols">Include symbols</string>
+    <string name="generator_hint">This replaces the current password.</string>
 
     <!-- 通用 -->
     <string name="common_cancel">Cancel</string>
     <string name="common_save">Save</string>
-    <string name="common_delete">Delete</string>
     <string name="common_back">Back</string>
     <string name="common_show">Show</string>
     <string name="common_hide">Hide</string>
-    <string name="common_required">Required</string>
 </resources>

@@ -44,7 +44,7 @@ object PasswordType {
     fun customText(stored: String): String =
         if (isCustom(stored)) stored.removePrefix(CUSTOM_PREFIX) else ""
 
-    fun custom(stored: String, text: String): String {
+    fun custom(text: String): String {
         val trimmed = text.trim().take(MAX_CUSTOM_LENGTH)
         return if (trimmed.isEmpty()) CUSTOM_PREFIX else CUSTOM_PREFIX + trimmed
     }
