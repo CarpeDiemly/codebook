@@ -4,11 +4,15 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.carpediemly.codebook.ui.AppViewModel
 import com.carpediemly.codebook.ui.CodeBookApp
 import com.carpediemly.codebook.ui.theme.CodeBookTheme
 
 class MainActivity : AppCompatActivity() {
+
+    private val appViewModel: AppViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +24,18 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContent {
             CodeBookTheme {
-                CodeBookApp()
+                CodeBookApp(appViewModel)
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        appViewModel.onAppForegrounded()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        appViewModel.onAppBackgrounded()
     }
 }
