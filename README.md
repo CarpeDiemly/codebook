@@ -1,7 +1,13 @@
 # CodeBook（密码本）
 
+<img src="docs/assets/app-icon.png" width="96" alt="CodeBook 图标">
+
 离线安卓密码管理器：账号、密码、密码类型、备注都存在手机本地的一个**加密文件**里。
 应用**不申请 INTERNET 权限**，因此系统内核层面就无法建立网络连接——不是"代码里没写请求"。
+
+图标：白色密码本 + 挖空钥匙孔 + 青绿色书签，深蓝渐变底。自适应图标（API 26+）并附带
+Android 13+ 主题图标的单色层；矢量绘制，无位图，设计源文件在 `design/icon.svg`，
+预览可用 `python tools/render_icon_preview.py` 重新生成。
 
 ## 当前进度
 
