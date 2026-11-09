@@ -55,3 +55,11 @@ adb install -r dist\CodeBook-0.1.0-debug.apk
 
 `keys/codebook-release.jks` 与 `keystore.properties` **不入库**，请自行备份。
 签名一旦更换，已安装的 App 只能卸载重装（数据会丢失，除非先导出）。
+
+## 许可证
+
+本项目以 [GNU General Public License v3.0](LICENSE) 发布。
+
+Copyright (C) 2026 yangli
+
+这意味着你可以自由使用、修改和分发本软件，但衍生作品必须同样以 GPLv3 开源，且不提供任何担保。
