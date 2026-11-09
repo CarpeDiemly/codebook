@@ -2,6 +2,60 @@
 <resources>
     <string name="app_name">密码本</string>
 
-    <string name="smoke_title">密码本已就绪</string>
-    <string name="smoke_subtitle">离线密码库 · 不联网</string>
+    <!-- 初始化 -->
+    <string name="setup_title">创建你的保险库</string>
+    <string name="setup_subtitle">数据只保存在这台手机上：没有账号、不上传云端、不联网。</string>
+    <string name="setup_master_password">主密码</string>
+    <string name="setup_confirm_password">确认主密码</string>
+    <string name="setup_password_rule">至少 8 位，建议 12 位以上。</string>
+    <string name="setup_strength">强度：%1$s</string>
+    <string name="setup_strength_0">太短</string>
+    <string name="setup_strength_1">弱</string>
+    <string name="setup_strength_2">一般</string>
+    <string name="setup_strength_3">强</string>
+    <string name="setup_strength_4">很强</string>
+    <string name="setup_warning">主密码无法找回。忘记主密码，数据就无法恢复，请定期导出加密备份。</string>
+    <string name="setup_create">创建保险库</string>
+    <string name="setup_error_mismatch">两次输入的密码不一致。</string>
+    <string name="setup_error_too_short">主密码至少需要 8 位。</string>
+    <string name="setup_error_generic">创建失败，请重试。</string>
+
+    <!-- 解锁 -->
+    <string name="unlock_title">保险库已锁定</string>
+    <string name="unlock_subtitle">输入主密码解锁。</string>
+    <string name="unlock_button">解锁</string>
+    <string name="unlock_error_wrong">主密码不正确。</string>
+    <string name="unlock_error_corrupt">保险库文件已损坏或被篡改。</string>
+    <string name="unlock_error_unsupported">不支持的保险库格式。</string>
+    <string name="unlock_error_missing">未找到保险库文件。</string>
+
+    <!-- 列表 -->
+    <string name="vault_title">保险库</string>
+    <string name="vault_empty_title">还没有条目</string>
+    <string name="vault_empty_body">添加第一个账号，开始使用。</string>
+    <string name="vault_lock">锁定</string>
+    <string name="vault_add">添加条目</string>
+    <string name="vault_search_hint">搜索名称、账号或备注</string>
+    <string name="vault_count">%1$d 条</string>
+    <string name="vault_count_one">1 条</string>
+    <string name="vault_no_match">没有匹配的条目</string>
+
+    <!-- 密码类型 -->
+    <string name="type_login">登录密码</string>
+    <string name="type_payment">支付密码</string>
+    <string name="type_bankcard">银行卡密码</string>
+    <string name="type_pin">PIN 码</string>
+    <string name="type_pattern">手势密码</string>
+    <string name="type_security">密保答案</string>
+    <string name="type_applock">应用锁</string>
+    <string name="type_custom">自定义</string>
+
+    <!-- 通用 -->
+    <string name="common_cancel">取消</string>
+    <string name="common_save">保存</string>
+    <string name="common_delete">删除</string>
+    <string name="common_back">返回</string>
+    <string name="common_show">显示</string>
+    <string name="common_hide">隐藏</string>
+    <string name="common_required">必填</string>
 </resources>

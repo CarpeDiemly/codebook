@@ -2,6 +2,60 @@
 <resources>
     <string name="app_name">CodeBook</string>
 
-    <string name="smoke_title">CodeBook is ready</string>
-    <string name="smoke_subtitle">Offline password vault · No network access</string>
+    <!-- 初始化 -->
+    <string name="setup_title">Create your vault</string>
+    <string name="setup_subtitle">Everything stays on this phone. No account, no cloud, no network.</string>
+    <string name="setup_master_password">Master password</string>
+    <string name="setup_confirm_password">Confirm master password</string>
+    <string name="setup_password_rule">At least 8 characters, 12+ recommended.</string>
+    <string name="setup_strength">Strength: %1$s</string>
+    <string name="setup_strength_0">too short</string>
+    <string name="setup_strength_1">weak</string>
+    <string name="setup_strength_2">fair</string>
+    <string name="setup_strength_3">strong</string>
+    <string name="setup_strength_4">very strong</string>
+    <string name="setup_warning">There is no password reset. If you forget the master password, the data cannot be recovered. Export an encrypted backup regularly.</string>
+    <string name="setup_create">Create vault</string>
+    <string name="setup_error_mismatch">The two passwords do not match.</string>
+    <string name="setup_error_too_short">The master password must be at least 8 characters.</string>
+    <string name="setup_error_generic">Could not create the vault.</string>
+
+    <!-- 解锁 -->
+    <string name="unlock_title">Vault locked</string>
+    <string name="unlock_subtitle">Enter your master password to unlock.</string>
+    <string name="unlock_button">Unlock</string>
+    <string name="unlock_error_wrong">Wrong master password.</string>
+    <string name="unlock_error_corrupt">The vault file is damaged or has been tampered with.</string>
+    <string name="unlock_error_unsupported">Unsupported vault format.</string>
+    <string name="unlock_error_missing">Vault not found.</string>
+
+    <!-- 列表 -->
+    <string name="vault_title">Vault</string>
+    <string name="vault_empty_title">No entries yet</string>
+    <string name="vault_empty_body">Add your first account to get started.</string>
+    <string name="vault_lock">Lock</string>
+    <string name="vault_add">Add entry</string>
+    <string name="vault_search_hint">Search name, account or note</string>
+    <string name="vault_count">%1$d entries</string>
+    <string name="vault_count_one">1 entry</string>
+    <string name="vault_no_match">No matching entries</string>
+
+    <!-- 密码类型 -->
+    <string name="type_login">Login password</string>
+    <string name="type_payment">Payment password</string>
+    <string name="type_bankcard">Bank card password</string>
+    <string name="type_pin">PIN code</string>
+    <string name="type_pattern">Pattern lock</string>
+    <string name="type_security">Security answer</string>
+    <string name="type_applock">App lock</string>
+    <string name="type_custom">Custom</string>
+
+    <!-- 通用 -->
+    <string name="common_cancel">Cancel</string>
+    <string name="common_save">Save</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_back">Back</string>
+    <string name="common_show">Show</string>
+    <string name="common_hide">Hide</string>
+    <string name="common_required">Required</string>
 </resources>
