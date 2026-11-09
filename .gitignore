@@ -1,0 +1,28 @@
+# 构建产物
+build/
+.gradle/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# 本地与工具链（体积大、与机器相关）
+.tools/
+local.properties
+
+# 签名材料：绝不入库
+keystore.properties
+keys/
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

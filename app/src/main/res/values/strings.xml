@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CodeBook</string>
+
+    <string name="smoke_title">CodeBook is ready</string>
+    <string name="smoke_subtitle">Offline password vault · No network access</string>
+</resources>
